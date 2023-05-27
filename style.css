@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+.main-container {
+    
+    width: 90%;
+    max-width: 920px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.flex-items {
+    padding: 1.2rem;
+    /* height: 450px; */
+    overflow: hidden;
+    color: white;
+}
+/* Spacing and other properties to the img and info  */
+
+.flex-items img {
+    padding: 1rem 1.9rem;
+}
+.flex-items .info h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+.flex-items .info p {
+    line-height: 1.8;
+}
+.flex-items .info , .buttons {
+    padding: 1.2rem 1.9rem;
+}
+.flex-items .buttons {
+    margin-top: 1.5rem;
+}
+/* Button Styling  */
+.btn {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: white;
+    border: none;
+    padding: .8rem 1.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    overflow: hidden;
+    border: 2px solid #ffffff;
+    transition: all 200ms ease-in-out;
+}
+.sedan-section .btn {
+    color: hsl(31, 77%, 52%);
+}
+.suvs-section .btn {
+    color: hsl(184, 100%, 22%);
+}
+.luxury-section .btn {
+    color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+    overflow: hidden;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #ffffff;
+  }
+
+/* Giving Border Radius */
+
+/* Sedans Section  */
+.sedan-section {
+    background-color: hsl(31, 77%, 52%);
+    border-radius:  10px 0 0 10px;
+}
+/* SUVs section */
+.suvs-section {
+    background-color: hsl(184, 100%, 22%);
+}
+.luxury-section {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 10px 10px 0;
+}
+/* Media Queries  */
+@media screen and (max-width:800px) {
+    .main-container {
+        flex-wrap: wrap;
+        margin: 3rem auto;
+        width: 70%;
+    }
+    .sedan-section {
+       border-radius: 10px 10px 0 0;
+    }
+    
+    .luxury-section {
+       border-radius: 0 0 10px 10px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .main-container {
+        width: 80%;
+    }
+    .flex-items img {
+        padding: 1rem 1rem;
+    }
+    .flex-items .info, .buttons {
+        padding:1.2rem 1rem ;
+    }
+    .flex-items .buttons {
+        margin-top: 0rem;
+    }
+    .btn {
+        padding: .8rem 1.8rem;
+    }
+}
+@media screen and (max-width: 390px) {
+    .container {
+        width: 90%;
+    }
+}
